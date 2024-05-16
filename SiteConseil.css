@@ -1,24 +1,31 @@
 body{
+	background-color:#2653ac;
 	margin:0px;
+	font-family:"Times New Roman", serif;
 }
 
 main{
-	margin:20px
+	margin:20px;
 }
 
 .titre{
+	font-family: "Rockwell Extra Bold", serif;
+	color: white;
 	text-align:center;
+	text-shadow:4px 4px 4px #6186c1;
 }
 
 .navbar ul{
 	list-style-type:none;
-	background-color:#31D170;
 	padding:0px;
-	margin:0px;
+	margin-right:1255px;
 	overflow:hidden;
+	background-color:#6186c1;
+	border-radius:7px;
 }
 
 .navbar a{
+	font-family: "Rockwell", serif; /* Police des éléments de la barre */
 	color: white;
 	text-decoration:none;
 	padding:15px;
@@ -27,6 +34,8 @@ main{
 }
 
 .navbar a:hover{
+	font-family: "Rockwell Extra Bold", serif;
+	border-radius:7px;
 	background-color:#3192D1; /* couleur lorsque la souris passe sur les elements */
 }
 
@@ -35,12 +44,13 @@ main{
 }
 
 .page_actuel{
-	background-color:#31D1C0;
+	background-color:#a2b9d6;
+	border-radius:7px;
 }
 
 .conseil_texte {
   padding: 16px;
-  margin: 16px 0;
+  margin: 16px;
   margin-right:800px;
 }
 
@@ -48,4 +58,30 @@ main{
   padding: 16px;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+input{
+	border:none;
+	border-radius:4px;
+	box-shadow: 1px 1px 1px 1px black;
+	background-color:#a2b9d6;
+}
+
+[for="password"]{
+	word-spacing:5px; 
+}
+
+:hover[type="submit"]{
+	background-color:#3192D1;
+}
+
+fielset{
+	font-family: "Rockwell", serif;
+	color: white;
+	text-align:center;
+	padding:40px;
+	float:left;
+	margin-left:740px;
+	border-radius:7px;
+	box-shadow: 5px 6px 10px 6px black;
 }
