@@ -1,0 +1,51 @@
+body{
+	margin:0px;
+}
+
+main{
+	margin:20px
+}
+
+.titre{
+	text-align:center;
+}
+
+.navbar ul{
+	list-style-type:none;
+	background-color:#31D170;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+}
+
+.navbar a{
+	color: white;
+	text-decoration:none;
+	padding:15px;
+	display:block;
+	text-align:center;
+}
+
+.navbar a:hover{
+	background-color:#3192D1; /* couleur lorsque la souris passe sur les elements */
+}
+
+.navbar li{
+	float:left;/* bar de navigation horizontal*/
+}
+
+.page_actuel{
+	background-color:#31D1C0;
+}
+
+.conseil_texte {
+  padding: 16px;
+  margin: 16px 0;
+  margin-right:800px;
+}
+
+.conseil_texte {
+  padding: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
