@@ -86,6 +86,7 @@ fieldset {
 	padding: 40px;
 	float: left;
 	margin-left: 740px;
+	border:non;
 	border-radius: 7px;
 	box-shadow: 5px 6px 10px 6px black;
 }
