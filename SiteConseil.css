@@ -52,8 +52,16 @@ main {
 }
 
 .conseil_texte {
+	color:#2653ac;
 	padding: 16px;
-	margin: 16px;
+	margin-left:300px;
+	margin-right:300px;
+	font-size:large;
+	background-color: #ffffff; /* Couleur de fond de la boîte */
+	border: 2px solid #6186c1; /* Bordure de la boîte */
+	border-radius: 10px; /* Coins arrondis */
+	margin: 20px auto; /* Marges */
+	max-width: 600px; /* Largeur maximale de la boîte */
 }
 
 input {
@@ -80,4 +88,14 @@ fieldset {
 	margin-left: 740px;
 	border-radius: 7px;
 	box-shadow: 5px 6px 10px 6px black;
+}
+
+.box {
+	background-color: #fff; /* Couleur de fond de la boîte */
+	border: 2px solid #6186c1; /* Bordure de la boîte */
+	border-radius: 10px; /* Coins arrondis */
+	padding: 20px; /* Espace intérieur */
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Ombre de la boîte */
+	margin: 20px auto; /* Marges */
+	max-width: 600px; /* Largeur maximale de la boîte */
 }
