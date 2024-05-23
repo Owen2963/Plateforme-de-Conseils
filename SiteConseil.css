@@ -132,7 +132,7 @@ fieldset {
     font-family: "Times New Roman", serif;
 }
 
-.creer_un_conseil input[type="submit"] {
+.creer_un_conseil button[type="submit"] {
     background-color: #6186c1;
     border: none;
     border-radius: 5px;
