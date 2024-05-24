@@ -17,10 +17,11 @@ if (!file_exists($nom_dossier)) {
 if (isset($_POST['submit'])) {
     // Vérifier si le champ de texte n'est pas vide
     if (!empty($_POST['content']) && !empty($_POST['title']) && !empty($_POST['category'])) {
-        $titre = preg_replace('/[^A-Za-z0-9_\-]/', '_', $_POST['title']); // Nettoyage du titre pour éviter les problèmes avec les noms de fichiers
+		// Nettoyage du titre pour éviter les problèmes avec les noms de fichiers
+		$titre = preg_replace('/[^A-Za-z0-9_\-]/', '_', $_POST['title']); 
         $category = preg_replace('/[^A-Za-z0-9_\-]/', '_', $_POST['category']); // Nettoyage de la catégorie
-        // Générer un nom de fichier unique basé sur la date et l'heure actuelles
-        $filename = $nom_dossier."Article_". $titre ."_". date("Ymd_His") . ".txt";
+		// Générer un nom de fichier unique basé sur le titre et la date et l'heure actuelles
+		$filename = $nom_dossier . $titre . ".txt";
         // Récupérer le contenu du champ de texte
         $content = "Catégorie: " . $category . "\n\n" . $_POST['content'];
         // Écrire le contenu dans le fichier texte
