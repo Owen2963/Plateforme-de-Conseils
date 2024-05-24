@@ -64,6 +64,44 @@
 			<h1 class="conseil_titre">10. Utiliser un support papier pour désencombrer son esprit</h1>
 			<p><b>Un agenda papier ou un carnet de bord sera bien plus efficace qu'une application sur smartphone. Ainsi, le simple fait d'écrire vos préoccupations sur du papier vous aidera à vous en délivrer, et à prendre du recul sur vos causes de stress. Nous vous recommandons donc de commencer par noter dans un carnet un maximum de choses pour commencer à mieux organiser votre vie. Pour vous aider à mettre en place une feuille de route ultra-efficace pour atteindre vos objectifs professionnels et personnels, le carnet de projets accompagné de ses méthodes d’organisation, sera donc ultra-efficace.</b></p>
 			</div>
+			
+        <?php
+			// Chemin vers le dossier des articles
+			$nom_dossier = "Articles/";
+
+			// Vérifier si le dossier existe
+			if (file_exists($nom_dossier)) {
+    // Lire les fichiers dans le dossier
+    $fichiers = array_diff(scandir($nom_dossier), array('.', '..'));
+
+    // Afficher chaque conseil
+    foreach ($fichiers as $fichier) {
+        $chemin_complet = $nom_dossier . $fichier;
+        
+        // Vérifier si le fichier existe toujours
+        if (file_exists($chemin_complet)) {
+            $contenu = file_get_contents($chemin_complet);
+            $lignes = explode("\n", $contenu);
+
+            // Extraire le titre (nom du fichier) et le contenu
+            $titre = basename($fichier, ".txt");
+            $categorie = array_shift($lignes);
+            $conseil = implode("\n", $lignes);
+
+            echo "<div class='conseil_texte'>";
+            echo "<h1 class='conseil_titre'>" . htmlspecialchars($titre) . "</h1>";
+            echo "<p><b>" . nl2br(htmlspecialchars($conseil)) . "</b></p>";
+            echo "</div>";
+        } else {
+            // Supprimer le fichier de la liste des fichiers à afficher
+            // Cela évite d'afficher des fichiers supprimés
+            unset($fichiers[array_search($fichier, $fichiers)]);
+        }
+    }
+} else {
+    echo "Aucun conseil disponible pour le moment.";
+}
+        ?>
 		</main>
 	</body>
 </html>
