@@ -1,41 +1,37 @@
 <?php
-
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $nom_dossier = "Articles/";
 
-// Créer le dossier
+// Créer le dossier si nécessaire
 if (!file_exists($nom_dossier)) {
-    mkdir($nom_dossier);
-    echo "Le dossier $nom_dossier a été créé.";
+    if (mkdir($nom_dossier, 0777, true)) {
+        echo "Dossier créé<br>";
+    } else {
+        echo "Erreur lors de la création du dossier<br>";
+    }
 }
-
 
 if (isset($_POST['submit'])) {
     // Vérifier si le champ de texte n'est pas vide
-
-    if (!empty($_POST['content'])) {
-        $titre = $_POST['title'];
-
-        
+    if (!empty($_POST['content']) && !empty($_POST['title']) && !empty($_POST['category'])) {
+        $titre = preg_replace('/[^A-Za-z0-9_\-]/', '_', $_POST['title']); // Nettoyage du titre pour éviter les problèmes avec les noms de fichiers
+        $category = preg_replace('/[^A-Za-z0-9_\-]/', '_', $_POST['category']); // Nettoyage de la catégorie
         // Générer un nom de fichier unique basé sur la date et l'heure actuelles
         $filename = $nom_dossier."Article_". $titre ."_". date("Ymd_His") . ".txt";
-        
         // Récupérer le contenu du champ de texte
-        $content = $_POST['content'];
-        
+        $content = "Catégorie: " . $category . "\n\n" . $_POST['content'];
         // Écrire le contenu dans le fichier texte
-        file_put_contents($filename, $content);
-        
-        echo "Le document texte a été créé avec succès !";
-       echo "<script>setTimeout(function(){window.location.href='index.html';}, 100);</script>";
-
-        
-       
+        if (file_put_contents($filename, $content)) {
+            echo "Le document texte a été créé avec succès !<br>";
+            echo "<script>setTimeout(function(){window.location.href='accueil.php';}, 1000);</script>";
+        } else {
+            echo "Erreur lors de la création du document texte<br>";
+        }
     } else {
-        echo "Veuillez saisir du texte pour créer le document.";
-       
+        echo "Veuillez saisir toutes les informations pour créer le document.<br>";
     }
 }
 ?>
-
