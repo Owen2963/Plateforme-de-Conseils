@@ -105,7 +105,7 @@ if (file_exists($nom_dossier)) {
             <li><b><a href="nos_conseils.html">Nos Conseils</a></b></li>
             <li><b><a href="conseil_du_jour.html">Conseil du jour</a></b></li>
             <li><b><a href="creer_un_conseil_bis.php">Créer un conseil</a></b></li>
-            <li><b><a href="profil.html">Profil</a></b></li>
+            <li><b><a href="profil.php">Profil</a></b></li>
         </ul>
     </nav>
     <main>
