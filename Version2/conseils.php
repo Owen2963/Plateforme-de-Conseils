@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // Démarre la session
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,6 +15,7 @@ session_start();
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li class="page_actuelle"><a href="conseils.php">Conseils</a></li>
+				<!--Vérifie si l'utilisateur est connecté-->
                 <?php if (isset($_SESSION['email'])): ?>
                     <li><a href="soumettre.php">Soumettre un Conseil</a></li>
                     <li><a href="profil.php">Profil</a></li>
@@ -38,15 +39,17 @@ session_start();
             $searchTerm = isset($_GET['search']) ? trim($_GET['search']) : '';
             $searchCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
 
+            // Ouvre le fichier CSV contenant les données des conseils
             if (($handle = fopen("data.csv", "r")) !== FALSE) {
                 fgetcsv($handle); // Ignore l'en-tête
                 while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                    // Vérifie si le conseil correspond aux critères de recherche
                     if (($searchTerm === '' || stripos($row[1], $searchTerm) !== FALSE || stripos($row[2], $searchTerm) !== FALSE) &&
                         ($searchCategory === '' || stripos($row[3], $searchCategory) !== FALSE)) {
                         $shortDescription = strlen($row[2]) > 50 ? substr($row[2], 0, 50) . "..." : $row[2];
                         $email = isset($row[4]) ? $row[4] : 'Email non disponible';
 
-                        // Calcul de la note moyenne
+                        // Calcul de la note moyenne du conseil
                         $totalNotes = 0;
                         $nombreNotes = 0;
                         if (($notesHandle = fopen("notes.csv", "r")) !== FALSE) {
@@ -61,6 +64,7 @@ session_start();
                         }
                         $noteMoyenne = $nombreNotes ? $totalNotes / $nombreNotes : 'Pas encore de notes';
 
+                        // Affiche le conseil avec ses détails
                         echo "<div class='conseil'>";
                         echo "<h3><a href='conseil.php?id={$row[0]}'>{$row[1]}</a></h3>";
                         echo "<p>$shortDescription</p>";
