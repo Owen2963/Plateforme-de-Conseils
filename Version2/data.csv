@@ -1,59 +1,9 @@
 id,titre,description,categorie,email
-66525a89d4105,zoihfzaoi,"Plateforme de partage de conseils et d'astuces pour la 
-vie quotidienne 
-1. Introduction 
-Le projet consiste à développer une plateforme en ligne où les utilisateurs peuvent 
-partager, rechercher et consulter des conseils pratiques et des astuces pour simplifier 
-leur vie quotidienne dans divers domaines. Cette plateforme servira de ressource utile 
-pour aider les utilisateurs à découvrir de nouvelles façons de résoudre des problèmes et 
-d'améliorer leur quotidien. 
-2. Objectifs 
-• Créer une plateforme conviviale permettant aux utilisateurs de naviguer 
-facilement à travers les conseils et les astuces. 
-• Offrir la possibilité aux utilisateurs de soumettre leurs propres conseils et 
-astuces via un formulaire interactif. 
-• Mettre en place un système de notation et de commentaires pour évaluer la 
-qualité des conseils. 
-• Encourager l'interaction et l'engagement des utilisateurs en permettant la 
-discussion et le partage d'expériences autour des conseils et des astuces. 
-3. Fonctionnalités principales 
-3.1 Page d'accueil 
-• Afficher une sélection de conseils et d'astuces les plus populaires ou les plus 
-récents dans différentes catégories. 
-• Barre de recherche permettant aux utilisateurs de rechercher des conseils par 
-mot-clé, catégorie, etc. 
-3.2 Page de conseils 
-• Présenter une liste de conseils et d'astuces disponibles avec des titres, des 
-résumés et des informations sur les auteurs. 
-• Pagination pour faciliter la navigation entre les différentes pages de conseils. 
-3.3 Pages individuelles de conseils 
-Afficher en détail un conseil spécifique avec des instructions détaillées, des images, 
-des vidéos et des commentaires des utilisateurs. 
-3.4 Page de soumission de conseil 
-• Permettre aux utilisateurs de soumettre leurs propres conseils via un formulaire 
-interactif. 
-• Les champs incluent le titre, la catégorie, les instructions, les images, les vidéos, 
-etc. 
-3.5 Page de profil utilisateur  
-• Permettre aux utilisateurs de créer un profil avec des informations personnelles 
-et des statistiques sur leurs contributions. 
-• Possibilité pour les utilisateurs de modifier leur profil et de gérer leurs conseils 
-soumis. 
-3.6 Système de notation et de commentaires (optionnel) 
-• Offrir aux utilisateurs la possibilité de noter et de laisser des commentaires sur 
-les conseils. 
-• Afficher la note moyenne de chaque conseil basée sur les votes des utilisateurs. 
-4. Technologies utilisées 
-• HTML, CSS pour le front-end. 
-• PHP pour le back-end. 
-• Utilisation de fichiers CSV ou une autre source de données comme stockage 
-pour les conseils, les commentaires, etc. 
-5. Interface utilisateur 
-Conception d'une interface utilisateur conviviale et intuitive pour faciliter la navigation 
-et la consultation des conseils et astuces. 
-6. Livrables 
-Site web fonctionnel et entièrement opérationnel. 
-Documentation détaillée du code source et des fonctionnalités.",apç_zduha,armand.peuchaud@gmail.com
-66525d8f9b72a,efzhbf,iduozabh,aiudbza,armand.peuchaud@gmail.com
-665277b1583f6,"le teste final","oN VERRA","j'espere ca marche",armand.peuchaud@gmail.com
-66527844c481b,SDQGQSDGS,QDVAQ,SDVZSE,armand.peuchaud@gmail.com
+66525a89d4105,"Apprendre à vaincre la procrastination","Certaines tâches quotidiennes sont tellement rébarbatives qu'on peut très facilement être tenté de relâcher ses efforts et mettre ses bonnes intentions au placard, simplement parce qu'on ne parvient pas à se motiver sur le long terme. Vaincre la procrastination est une problématique à laquelle nous sommes tous confrontés, et avoir la force de ne pas remettre au lendemain demande du courage ! Il va pourtant falloir sortir de votre zone de confort et faire l'effort de prioriser un maximum pour ne pas vous laisser tenter par cette envie puissante de ne rien faire.","De L'équipe",admins@gmail.com
+66525d8f9b72a,"Se lever, puis faire une liste des tâches tous les matins","Prôné par un grand nombre d’entrepreneurs à succès (dont on peut retrouver les témoignages dans le carnet du temps), l'un de vos premiers réflexes dès le réveil est de faire le point sur les choses importantes que vous avez à faire dans la journée. Commencez toujours votre liste par les actions primordiales, celles que vous ne pouvez pas reporter. Soyez également cohérent avec vous-même. Ça n'a aucun sens de rédiger une todo list interminable dont vous ne verrez jamais la fin... simplement car vous n’aurez pas le temps de tout faire. Nous vous conseillons d’ailleurs d’utiliser le carnet de to-do list pour prendre plaisir à vous organiser sans stresser.","De L'équipe",admins@gmail.com
+665277b1583f6,"Apprendre à gérer son temps pour organiser sa vie","Une bonne gestion du temps est souvent la preuve d'une organisation personnelle cohérente et précise. En parvenant à anticiper ce que vous faites chaque jour (par exemple : avec un emploi du temps), vous pourrez prendre du recul sur votre programme de la semaine ou encore du mois. De cette manière, organiser vos journées sera bien plus logique. Vous aurez donc une meilleure vision du temps libre dont vous disposez.","De L'équipe",admins@gmail.com
+66527844c481b,"Mettre en place un vrai plan d'action pour vos projets","Votre vie personnelle a autant d'importance que votre vie professionnelle mais, pour pouvoir marier harmonieusement ces deux univers, une bonne organisation devra être mise en place. Sachez qu'il en va de même pour vos projets personnels. Si vous avez des objectifs en tête, transformez-les en plan d’actions précises. Non seulement, vous aurez le sentiment de vous rapprocher du but, mais en plus vous serez bien plus motivé pour les réaliser.","De L'équipe",admins@gmail.com
+6652f3455ff2e," Prendre conscience du fait qu'on va changer de vie","Ressentir le besoin d'organiser sa vie est souvent le signe qu'on s'est laissé déborder par certaines tâches du quotidien. Vous souffrez sûrement comme beaucoup du syndrome de charge mentale, et le simple fait de consacrer un peu de temps à faire le tri et mettre en place une bonne organisation personnelle sera bien sûr indispensable. Mais ça reste loin d'être suffisant. Avant de s'interroger sur la manière dont on pourrait organiser sa vie et son temps, il faut d’abord se rendre compte que l’on va opérer de grands changements dans notre vie de tous les jours. C'est un engagement que l’on prend envers soi-même afin d'être certain que cette nouvelle organisation soit bénéfique. Vous allez devoir prendre de nouvelles habitudes pour repartir sur de bonnes bases, et tenir alors vos bonnes résolutions ne sera qu’une simple formalité !","De L'équipe",admins@gmail.com
+6652f94d02ae7,"Savoir se distraire et prendre du temps pour soi","Être productif est bon pour le moral et peut vite devenir addictif, quand on réalise à quel point on peut s'épanouir simplement en faisant l'effort d'organiser sa vie... Enthousiaste et motivé, on en oublierait presque de prendre du temps pour soi. Ce manque de temps que l’on s’accorde conduit à déprimer, à abandonner parfois ses efforts sur la longueur... ou pire : à vivre un burn-out. L'intérêt final de la mise en place de votre nouvelle organisation est de pouvoir mieux gérer votre temps. Et donc, de profiter davantage de vos instants de détente. Apprenez à vous détendre, à profiter du moment présent. Et surtout, ne vous sentez pas coupable de vous être accordé une pause.","De L'équipe",admins@gmail.com
+6652f96e91846,"Prendre le temps de faire le point","Dans l'enthousiasme, vous risquez de ne pas consacrer une seule minute à faire le point sur votre situation. C'est une erreur qui pourrait être préjudiciable pour la suite. Si par exemple, c’est une surcharge de travail qui nous pousse à se demander comment organiser sa vie, alors c'est le signe qu'un bilan est nécessaire. Il faut comprendre quelles sont les causes de ce stress et comment la situation a dégénéré en nous faisant perdre le contrôle. 
+						Identifiez la source de votre désorganisation et bannissez-la de votre nouvelle vie ! Sinon, le même schéma se reproduira éternellement et vous finirez par vous décourager à force de ne pas réussir à mettre de l'ordre dans votre vie.","De L'équipe",admins@gmail.com
