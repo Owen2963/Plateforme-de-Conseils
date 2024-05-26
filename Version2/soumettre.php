@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['email'])) {
-    header('Location: login.php');
+    header('Location: login.php');// Redirige l'utilisateur vers la page de connexion s'il n'est pas connecté
     exit;
 }
 ?>
@@ -31,6 +31,7 @@ if (!isset($_SESSION['email'])) {
         </nav>
     </header>
     <main>
+	 <!-- Formulaire pour soumettre un conseil avec des champs pour le titre, la catégorie, la description, et un bouton pour soumettre -->
         <form action="submit_conseil.php" method="post">
             <label for="titre">Titre:</label>
             <input type="text" id="titre" name="titre" required><br>
