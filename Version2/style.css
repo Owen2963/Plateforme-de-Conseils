@@ -214,6 +214,7 @@ article h2 {
         margin-bottom: 10px;
 }
 
+/* Marquage visuel de l'élément de la page actuellement visitée */
 .page_actuelle {
     background-color: #2E7031;
     border-radius: 7px;
