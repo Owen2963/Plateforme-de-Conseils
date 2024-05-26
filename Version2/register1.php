@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     fclose($file);
 
     // Rediriger l'utilisateur vers la page de connexion
-    header('Location: login.html');
+    header('Location: login.php');
     exit;
 }
 ?>
