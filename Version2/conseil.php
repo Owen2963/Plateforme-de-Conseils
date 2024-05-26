@@ -3,7 +3,7 @@ session_start();
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 $conseil = null;
 if (($handle = fopen("data.csv", "r")) !== FALSE) {
-    fgetcsv($handle); // Ignore l'en-tête
+    fgetcsv($handle); // Ignore l'en-tÃªte
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
         if ($row[0] == $id) {
             $conseil = $row;
@@ -14,7 +14,7 @@ if (($handle = fopen("data.csv", "r")) !== FALSE) {
 }
 
 if ($conseil === null) {
-    echo "Conseil non trouvé.";
+    echo "Conseil non trouvÃ©.";
     exit;
 }
 
@@ -22,7 +22,7 @@ if ($conseil === null) {
 $totalNotes = 0;
 $nombreNotes = 0;
 if (($handle = fopen("notes.csv", "r")) !== FALSE) {
-    fgetcsv($handle); // Ignore l'en-tête
+    fgetcsv($handle); // Ignore l'en-tÃªte
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
         if ($row[0] == $id) {
             $totalNotes += $row[1];
@@ -33,10 +33,10 @@ if (($handle = fopen("notes.csv", "r")) !== FALSE) {
 }
 $noteMoyenne = $nombreNotes ? $totalNotes / $nombreNotes : 'Pas encore de notes';
 
-// Récupération des commentaires
+// RÃ©cupÃ©ration des commentaires
 $commentaires = [];
 if (($handle = fopen("commentaires.csv", "r")) !== FALSE) {
-    fgetcsv($handle); // Ignore l'en-tête
+    fgetcsv($handle); // Ignore l'en-tÃªte
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
         if ($row[0] == $id) {
             $commentaires[] = $row;
@@ -58,11 +58,11 @@ if (($handle = fopen("commentaires.csv", "r")) !== FALSE) {
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="conseils.php">Conseils</a></li>
+                <li class="page_actuelle"><a href="conseils.php">Conseils</a></li>
                 <?php if (isset($_SESSION['email'])): ?>
                     <li><a href="soumettre.php">Soumettre un Conseil</a></li>
                     <li><a href="profil.php">Profil</a></li>
-                    <li><a href="logout.php">Déconnexion</a></li>
+                    <li><a href="logout.php">DÃ©connexion</a></li>
                 <?php else: ?>
                     <li><a href="register.php">Inscription</a></li>
                     <li><a href="login.php">Connexion</a></li>
