@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['email'])) {
-    header('Location: login.html');
+    header('Location: login.php');
     exit;
 }
 
@@ -25,7 +25,7 @@ $utilisateur = [
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="conseils.php">Conseils</a></li>
                 <li><a href="soumettre.php">Soumettre un Conseil</a></li>
-                <li><a href="profil.php">Profil</a></li>
+                <li class="page_actuelle"><a href="profil.php">Profil</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
         </nav>
