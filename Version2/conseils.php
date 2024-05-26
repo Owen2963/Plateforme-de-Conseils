@@ -14,11 +14,11 @@ session_start();
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="conseils.php">Conseils</a></li>
+                <li class="page_actuelle"><a href="conseils.php">Conseils</a></li>
                 <?php if (isset($_SESSION['email'])): ?>
                     <li><a href="soumettre.php">Soumettre un Conseil</a></li>
                     <li><a href="profil.php">Profil</a></li>
-                    <li><a href="logout.php">Déconnexion</a></li>
+                    <li><a href="logout.php">DÃ©connexion</a></li>
                 <?php else: ?>
                     <li><a href="register.php">Inscription</a></li>
                     <li><a href="login.php">Connexion</a></li>
@@ -29,8 +29,8 @@ session_start();
     <main>
         <h2>Liste des Conseils</h2>
         <form method="GET" action="conseils.php">
-            <input type="text" name="search" placeholder="Rechercher par mot-clé" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-            <input type="text" name="category" placeholder="Rechercher par catégorie" value="<?php echo isset($_GET['category']) ? htmlspecialchars($_GET['category']) : ''; ?>">
+            <input type="text" name="search" placeholder="Rechercher par mot-clÃ©" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+            <input type="text" name="category" placeholder="Rechercher par catÃ©gorie" value="<?php echo isset($_GET['category']) ? htmlspecialchars($_GET['category']) : ''; ?>">
             <button type="submit">Rechercher</button>
         </form>
         <div id="liste-conseils">
@@ -39,7 +39,7 @@ session_start();
             $searchCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
 
             if (($handle = fopen("data.csv", "r")) !== FALSE) {
-                fgetcsv($handle); // Ignore l'en-tête
+                fgetcsv($handle); // Ignore l'en-tÃªte
                 while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
                     if (($searchTerm === '' || stripos($row[1], $searchTerm) !== FALSE || stripos($row[2], $searchTerm) !== FALSE) &&
                         ($searchCategory === '' || stripos($row[3], $searchCategory) !== FALSE)) {
@@ -50,7 +50,7 @@ session_start();
                         $totalNotes = 0;
                         $nombreNotes = 0;
                         if (($notesHandle = fopen("notes.csv", "r")) !== FALSE) {
-                            fgetcsv($notesHandle); // Ignore l'en-tête
+                            fgetcsv($notesHandle); // Ignore l'en-tÃªte
                             while (($noteRow = fgetcsv($notesHandle, 1000, ",")) !== FALSE) {
                                 if ($noteRow[0] == $row[0]) {
                                     $totalNotes += $noteRow[1];
