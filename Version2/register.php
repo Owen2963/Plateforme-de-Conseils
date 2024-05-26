@@ -20,7 +20,7 @@ session_start();
                     <li><a href="profil.php">Profil</a></li>
                 <?php endif; ?>
                 <?php if (!isset($_SESSION['email'])): ?>
-                    <li><a href="register.php">Inscription</a></li>
+                    <li class="page_actuelle"><a href="register.php">Inscription</a></li>
                     <li><a href="login.php">Connexion</a></li>
                 <?php else: ?>
                     <li><a href="logout.php">Déconnexion</a></li>
