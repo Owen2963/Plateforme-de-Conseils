@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="conseils.php">Conseils</a></li>
-                <li><a href="soumettre.php">Soumettre un Conseil</a></li>
+                <li class="page_actuelle"><a href="soumettre.php">Soumettre un Conseil</a></li>
                 <li><a href="profil.php">Profil</a></li>
                 <?php if (!isset($_SESSION['email'])): ?>
                     <li><a href="register.php">Inscription</a></li>
