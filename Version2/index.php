@@ -39,6 +39,8 @@ usort($conseils, function($a, $b) {
     return $b['noteMoyenne'] <=> $a['noteMoyenne'];
 });
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -51,7 +53,7 @@ usort($conseils, function($a, $b) {
         <h1>Plateforme de Partage de Conseils</h1>
         <nav>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
+                <li class="page_actuelle"><a href="index.php">Accueil</a></li>
                 <li><a href="conseils.php">Conseils</a></li>
                 <?php if (isset($_SESSION['email'])): ?>
                     <li><a href="soumettre.php">Soumettre un Conseil</a></li>
