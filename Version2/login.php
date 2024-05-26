@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,7 +22,7 @@ session_start();
                     <li><a href="logout.php">Déconnexion</a></li>
                 <?php else: ?>
                     <li><a href="register.php">Inscription</a></li>
-                    <li><a href="login.php">Connexion</a></li>
+                    <li class="page_actuelle"><a href="login.php">Connexion</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
