@@ -1,46 +1,48 @@
-# README.md
+Plateforme de partage de conseils et d'astuces pour la vie quotidienne
 
-## Plateforme de partage de conseils et d'astuces pour la vie quotidienne
+Introduction:
 
-### Introduction
 Ce projet consiste à développer une plateforme en ligne où les utilisateurs peuvent partager, rechercher et consulter des conseils pratiques et des astuces pour simplifier leur vie quotidienne dans divers domaines. Cette plateforme servira de ressource utile pour aider les utilisateurs à découvrir de nouvelles façons de résoudre des problèmes et d'améliorer leur quotidien.
 
-### Objectifs
+Objectifs:
+
 - Créer une plateforme conviviale permettant aux utilisateurs de naviguer facilement à travers les conseils et les astuces.
 - Offrir la possibilité aux utilisateurs de soumettre leurs propres conseils et astuces via un formulaire interactif.
 - Mettre en place un système de notation et de commentaires pour évaluer la qualité des conseils.
 - Encourager l'interaction et l'engagement des utilisateurs en permettant la discussion et le partage d'expériences autour des conseils et des astuces.
 
-### Fonctionnalités principales
-1. **Page d'accueil**
+Fonctionnalités principales:
+
+1. Page d'accueil :
    - Afficher une sélection de conseils et d'astuces les plus populaires ou les plus récents dans différentes catégories.
    - Barre de recherche permettant aux utilisateurs de rechercher des conseils par mot-clé, catégorie, etc.
-2. **Page de conseils**
+
+2. Page de conseils :
    - Présenter une liste de conseils et d'astuces disponibles avec des titres, des résumés et des informations sur les auteurs.
    - Pagination pour faciliter la navigation entre les différentes pages de conseils.
-3. **Pages individuelles de conseils**
-   - Afficher en détail un conseil spécifique avec des instructions détaillées, des images, des vidéos et des commentaires des utilisateurs.
-4. **Page de soumission de conseil**
+
+3. Page de soumission de conseil :
    - Permettre aux utilisateurs de soumettre leurs propres conseils via un formulaire interactif.
-   - Les champs incluent le titre, la catégorie, les instructions, les images, les vidéos, etc.
-5. **Page de profil utilisateur**
+   - Les champs incluent le titre, la catégorie et les instructions.
+
+4. Page de profil utilisateur :
    - Permettre aux utilisateurs de créer un profil avec des informations personnelles et des statistiques sur leurs contributions.
    - Possibilité pour les utilisateurs de modifier leur profil et de gérer leurs conseils soumis.
-6. **Système de notation et de commentaires (optionnel)**
+
+5. Système de notation et de commentaires :
    - Offrir aux utilisateurs la possibilité de noter et de laisser des commentaires sur les conseils.
    - Afficher la note moyenne de chaque conseil basée sur les votes des utilisateurs.
 
-### Technologies utilisées
-- HTML, CSS pour le front-end.
-- PHP pour le back-end.
+ Technologies utilisées :
+- HTML, CSS, PHP
 - Utilisation de fichiers CSV pour les conseils (data.csv) et les utilisateurs inscrits (user.csv).
 
-### Structure des fichiers
-- **Version2/** : Contient tous les fichiers nécessaires pour lancer la plateforme.( à partir du fichier index.php après avoir tout téléchargé )
-- **data.csv** : Contient les différents conseils.
-- **user.csv** : Contient les informations des utilisateurs inscrits.
+ Structure des fichiers :
+- Version2/ : Contient tous les fichiers nécessaires pour lancer la plateforme.( à partir du fichier index.php après avoir tout téléchargé )
+- data.csv : Contient les différents conseils.
+- user.csv : Contient les informations des utilisateurs inscrits.
 
-### Fonctionnalités implémentées
+ Fonctionnalités implémentées :
 - Navigation conviviale à travers les conseils et les astuces.
 - Soumission de conseils par les utilisateurs via un formulaire interactif.
 - Affichage des conseils populaires et récents.
@@ -49,9 +51,9 @@ Ce projet consiste à développer une plateforme en ligne où les utilisateurs p
 - Création de profil utilisateur avec informations personnelles.
 - Système de notation et de commentaires.
 
-### Fonctionnalités non implémentées
+ Fonctionnalités non implémentées :
 - Modification des conseils déposés par les utilisateurs.
 - Gestion complète des statistiques de contributions des utilisateurs.
 
-### Notes
+ Notes :
 - La fonctionnalité permettant aux utilisateurs de modifier leurs conseils déposés ainsi que leurs statistiques de contributions n'a pas encore été implémentée.
