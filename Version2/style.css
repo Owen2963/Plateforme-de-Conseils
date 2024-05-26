@@ -12,7 +12,8 @@
     display: inline-block;
     margin-top: 10px;
     background-color: #4CAF50;
-    color: white;
+    color:#4CAF50;
+    text-shadow: 1px 5px 0px white;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
@@ -21,6 +22,8 @@
 
 .voir-plus:hover, .voir-moins:hover {
         background-color: #45a049;
+        color:#FFFFFF;
+        text-shadow: 1px 5px 0px #4CAF50;
 }
 
 /* Styles pour la barre de recherche */
@@ -212,6 +215,6 @@ article h2 {
 }
 
 .page_actuelle {
-	background-color: #2E7031;
-	border-radius: 7px;
+    background-color: #2E7031;
+    border-radius: 7px;
 }
