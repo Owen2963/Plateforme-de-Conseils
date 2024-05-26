@@ -1,24 +1,27 @@
 <?php
-session_start();
-$id = isset($_GET['id']) ? $_GET['id'] : '';
+session_start(); // Démarre la session
+$id = isset($_GET['id']) ? $_GET['id'] : ''; // Récupère l'ID du conseil depuis l'URL
 $conseil = null;
+
+// Lit le fichier CSV contenant les données des conseils
 if (($handle = fopen("data.csv", "r")) !== FALSE) {
     fgetcsv($handle); // Ignore l'en-tête
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
         if ($row[0] == $id) {
-            $conseil = $row;
+            $conseil = $row; // Stocke les données du conseil correspondant à l'ID
             break;
         }
     }
     fclose($handle);
 }
 
+// Si le conseil n'est pas trouvé, affiche un message et arrête le script
 if ($conseil === null) {
     echo "Conseil non trouvé.";
     exit;
 }
 
-// Calcul de la note moyenne
+// Calcul de la note moyenne du conseil
 $totalNotes = 0;
 $nombreNotes = 0;
 if (($handle = fopen("notes.csv", "r")) !== FALSE) {
@@ -33,13 +36,13 @@ if (($handle = fopen("notes.csv", "r")) !== FALSE) {
 }
 $noteMoyenne = $nombreNotes ? $totalNotes / $nombreNotes : 'Pas encore de notes';
 
-// Récupération des commentaires
+// Récupération des commentaires associés au conseil
 $commentaires = [];
 if (($handle = fopen("commentaires.csv", "r")) !== FALSE) {
     fgetcsv($handle); // Ignore l'en-tête
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
         if ($row[0] == $id) {
-            $commentaires[] = $row;
+            $commentaires[] = $row; // Stocke les commentaires associés au conseil
         }
     }
     fclose($handle);
@@ -73,23 +76,23 @@ if (($handle = fopen("commentaires.csv", "r")) !== FALSE) {
     <main>
         <article>
             <h2><?php echo $conseil[1]; ?></h2>
-            <p><?php echo nl2br($conseil[2]); ?></p>
+            <p><?php echo nl2br($conseil[2]); ?></p> <!-- Affiche la description du conseil -->
             <p><strong>Email de l'auteur:</strong> <?php echo $conseil[4]; ?></p>
             <p><strong>Note moyenne:</strong> <?php echo $noteMoyenne; ?></p>
             <h3>Commentaires</h3>
             <?php foreach ($commentaires as $commentaire): ?>
-                <p><strong><?php echo $commentaire[1]; ?>:</strong> <?php echo $commentaire[2]; ?></p>
+                <p><strong><?php echo $commentaire[1]; ?>:</strong> <?php echo $commentaire[2]; ?></p> <!-- Affiche les commentaires associés -->
             <?php endforeach; ?>
             <h3>Ajouter un commentaire</h3>
             <?php if (isset($_SESSION['email'])): ?>
-                <form action="submit_commentaire.php" method="post">
+                <form action="submit_commentaire.php" method="post"> <!-- Formulaire pour soumettre un commentaire -->
                     <input type="hidden" name="conseil_id" value="<?php echo $id; ?>">
                     <label for="commentaire">Commentaire:</label><br>
                     <textarea id="commentaire" name="commentaire" required></textarea><br>
                     <button type="submit">Soumettre</button>
                 </form>
                 <h3>Noter ce conseil</h3>
-                <form action="submit_note.php" method="post">
+                <form action="submit_note.php" method="post"> <!-- Formulaire pour soumettre une note -->
                     <input type="hidden" name="conseil_id" value="<?php echo $id; ?>">
                     <label for="note">Note:</label><br>
                     <select id="note" name="note" required>
